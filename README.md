@@ -37,6 +37,18 @@ You can try edit your own code to test, just modify the content in `demos/test` 
 $ ./single_run.sh demos/test
 ```
 
+To detect prototype pollution using it (assuming you already download ODGen from https://github.com/Song-Li/ODGen)
+
+1. Create files using CoCo tool pre-processing method
+``` shell
+$ ./single_run.sh demos/poc2
+```
+
+2. Run ODGen tool on generated files
+``` shell
+$ python3 odgen.py <js files from demos/poc2/opgen_generated_files dir> -m -a -q -t proto_pollution
+```
+
 ## Results
 Results are stored in `extension_dir/opgen_generated_files/res.txt`
 

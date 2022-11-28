@@ -8,3 +8,7 @@ tools/.DS_Store
 *.log
 .idea/
 *.pyc
+venv/
+node_modules/
+package.json
+package-lock.json
