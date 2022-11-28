@@ -10,6 +10,18 @@
 //     }
 // }
 
+// ========= Additional Code to make it work with ODGen Tool =========
+var callbackFuncs = {};
+var functionCount = 0;
+
+function RegisterFunc(name, callback) {
+    // Assign a unique ID to the callback function
+    callbackFuncs[name + '' + functionCount] = callback;
+    functionCount++;
+}
+
+module.exports = callbackFuncs;
+
 //  ========= the document and its elements are all objects ========= 
 
 function Document_element(id, class_name, tag){
